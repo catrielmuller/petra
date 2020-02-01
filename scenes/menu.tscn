@@ -1,3 +1,115 @@
-[gd_scene format=2]
+[gd_scene load_steps=7 format=2]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource path="res://assets/fonts/kenvector_future.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/sprites/buttonLarge.png" type="Texture" id=2]
+[ext_resource path="res://scenes/VBoxMenu.gd" type="Script" id=3]
+[ext_resource path="res://assets/background/bkg_menu.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+font_data = ExtResource( 1 )
+
+[node name="Node" type="Node"]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.948
+margin_bottom = 1.948
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxMenu" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -75.0
+margin_top = -71.5
+margin_right = 75.0
+margin_bottom = 71.5
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="TextureButton" parent="VBoxMenu"]
+margin_right = 150.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 150, 45 )
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="Label" type="Label" parent="VBoxMenu/Play"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.525
+anchor_bottom = 0.5
+margin_left = -33.6079
+margin_top = -13.2637
+margin_right = 50.6421
+margin_bottom = 49.7364
+custom_fonts/font = SubResource( 1 )
+text = "Play
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="TextureButton" parent="VBoxMenu"]
+margin_top = 49.0
+margin_right = 150.0
+margin_bottom = 94.0
+rect_min_size = Vector2( 150, 45 )
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="Label" type="Label" parent="VBoxMenu/Credits"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -61.2422
+margin_top = -15.5807
+margin_right = 78.7578
+margin_bottom = 80.4193
+custom_fonts/font = SubResource( 2 )
+text = "Credits
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="TextureButton" parent="VBoxMenu"]
+margin_top = 98.0
+margin_right = 150.0
+margin_bottom = 143.0
+rect_min_size = Vector2( 150, 45 )
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="Label2" type="Label" parent="VBoxMenu/Exit"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.521
+anchor_bottom = 0.5
+margin_left = -29.1313
+margin_top = -16.9473
+margin_right = 35.7187
+margin_bottom = 70.0527
+custom_fonts/font = SubResource( 2 )
+text = "EXIT
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="VBoxMenu/Play" to="VBoxMenu" method="_on_Play_pressed"]
+[connection signal="pressed" from="VBoxMenu/Credits" to="VBoxMenu" method="_on_Credits_pressed"]
