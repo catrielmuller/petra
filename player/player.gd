@@ -19,9 +19,13 @@ var anim = ""
 
 # cache the sprite here for fast access (we will set scale to flip it often)
 onready var sprite = $Sprite
+onready var shadow = $Shadow
+onready var shottimer = $EndShot
+
+var ready_timeout; var beat_timeout
+
 # cache bullet for fast access
 var Bullet = preload("res://player/Bullet.tscn")
-
 
 func _physics_process(delta):
 	# Increment counters
@@ -56,6 +60,9 @@ func _physics_process(delta):
 	# Shooting
 	if Input.is_action_just_pressed("ui_select"):
 		var bullet = Bullet.instance()
+		shadow.visible = false
+		sprite.visible = false
+		shottimer.start()
 		bullet.position = ($Sprite/BulletShoot as Position2D).global_position # use node for shoot position
 		bullet.linear_velocity = Vector2(sprite.scale.x * BULLET_VELOCITY + target_speed, (sprite.scale.y * BULLET_VELOCITY * -0.5))
 		bullet.add_collision_exception_with(self) # don't want player to collide with bullet
@@ -95,3 +102,8 @@ func _physics_process(delta):
 	if new_anim != anim:
 		anim = new_anim
 		($Anim as AnimationPlayer).play(anim)
+
+func _on_EndShot_timeout():
+	print_debug("RECIVIO")
+	shadow.visible = true
+	sprite.visible = true

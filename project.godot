@@ -39,12 +39,8 @@ _global_script_class_icons={
 [application]
 
 config/name="Petra"
-run/main_scene="res://scenes/test.tscn"
+run/main_scene="res://scenes/menu.tscn"
 config/icon="res://icon.png"
-
-[debug]
-
-settings/stdout/print_fps=true
 
 [display]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://player/player.gd" type="Script" id=1]
 [ext_resource path="res://player/robot_demo.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://player/osb_jump.png" type="Texture" id=7]
 [ext_resource path="res://player/osb_fire.png" type="Texture" id=8]
 [ext_resource path="res://sprites/light.png" type="Texture" id=9]
+[ext_resource path="res://sprites/shadow.png" type="Texture" id=10]
 
 [sub_resource type="Animation" id=1]
 resource_name = "crouch"
@@ -262,10 +263,23 @@ normal = ExtResource( 8 )
 action = "ui_select"
 visibility_mode = 1
 
-[node name="Light2D" type="Light2D" parent="."]
+[node name="Shadow" type="Light2D" parent="."]
+position = Vector2( 28.6446, -15.8568 )
+texture = ExtResource( 10 )
+texture_scale = 0.4
+mode = 3
+range_item_cull_mask = 31744
+shadow_item_cull_mask = 0
+
+[node name="Light" type="Light2D" parent="."]
 position = Vector2( 27.9536, -15.6351 )
 texture = ExtResource( 9 )
 texture_scale = 0.4
-color = Color( 1, 0.65098, 0.65098, 1 )
+color = Color( 0.65098, 0.65098, 0.65098, 1 )
 shadow_enabled = true
 shadow_filter = 3
+
+[node name="EndShot" type="Timer" parent="."]
+process_mode = 0
+wait_time = 3.0
+[connection signal="timeout" from="EndShot" to="." method="_on_EndShot_timeout"]
