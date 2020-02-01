@@ -66,14 +66,15 @@ anims/shutdown = SubResource( 4 )
 
 [node name="Shadow" type="Light2D" parent="."]
 texture = ExtResource( 4 )
-texture_scale = 0.3
+texture_scale = 0.4
 mode = 3
 range_item_cull_mask = 31744
 shadow_item_cull_mask = 1024
 
 [node name="Light" type="Light2D" parent="."]
 texture = ExtResource( 3 )
-texture_scale = 0.3
+texture_scale = 0.4
+color = Color( 0.65098, 0.65098, 0.65098, 1 )
 shadow_enabled = true
 shadow_color = Color( 1, 1, 1, 1 )
 shadow_filter = 3

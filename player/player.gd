@@ -61,7 +61,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_select"):
 		var bullet = Bullet.instance()
 		shadow.visible = false
-		sprite.visible = false
+		# sprite.visible = false
 		shottimer.start()
 		bullet.position = ($Sprite/BulletShoot as Position2D).global_position # use node for shoot position
 		bullet.linear_velocity = Vector2(sprite.scale.x * BULLET_VELOCITY + target_speed, (sprite.scale.y * BULLET_VELOCITY * -0.5))
@@ -106,4 +106,4 @@ func _physics_process(delta):
 func _on_EndShot_timeout():
 	print_debug("RECIVIO")
 	shadow.visible = true
-	sprite.visible = true
+	# sprite.visible = true
