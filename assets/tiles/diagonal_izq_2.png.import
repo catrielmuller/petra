@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tile pasto diagonal derecha (sin nada).png-9f5048ed6740a0365e71c8832e22a759.stex"
+path="res://.import/diagonal_izq_2.png-4adcd430555a451205c01ddd15b5d7d4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/tile pasto diagonal derecha (sin nada).png"
-dest_files=[ "res://.import/tile pasto diagonal derecha (sin nada).png-9f5048ed6740a0365e71c8832e22a759.stex" ]
+source_file="res://assets/tiles/diagonal_izq_2.png"
+dest_files=[ "res://.import/diagonal_izq_2.png-4adcd430555a451205c01ddd15b5d7d4.stex" ]
 
 [params]
 
