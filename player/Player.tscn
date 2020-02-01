@@ -10,8 +10,6 @@
 [ext_resource path="res://player/osb_fire.png" type="Texture" id=8]
 [ext_resource path="res://sprites/light.png" type="Texture" id=9]
 
-
-
 [sub_resource type="Animation" id=1]
 resource_name = "crouch"
 length = 0.01
@@ -235,7 +233,7 @@ stream = ExtResource( 4 )
 layer = 0
 
 [node name="Left" type="TouchScreenButton" parent="UI"]
-position = Vector2( 37.5275, 448.783 )
+position = Vector2( 39.0968, 591.589 )
 scale = Vector2( 1.49157, 1.46265 )
 normal = ExtResource( 5 )
 passby_press = true
@@ -243,7 +241,7 @@ action = "ui_left"
 visibility_mode = 1
 
 [node name="Right" type="TouchScreenButton" parent="UI"]
-position = Vector2( 156.273, 448.243 )
+position = Vector2( 192.367, 589.48 )
 scale = Vector2( 1.49157, 1.46265 )
 normal = ExtResource( 6 )
 passby_press = true
@@ -251,14 +249,14 @@ action = "ui_right"
 visibility_mode = 1
 
 [node name="Jump" type="TouchScreenButton" parent="UI"]
-position = Vector2( 888.721, 446.933 )
+position = Vector2( 1138.24, 594.447 )
 scale = Vector2( 1.49157, 1.46265 )
 normal = ExtResource( 7 )
 action = "ui_up"
 visibility_mode = 1
 
 [node name="Fire" type="TouchScreenButton" parent="UI"]
-position = Vector2( 888.399, 331.165 )
+position = Vector2( 1002.96, 594.808 )
 scale = Vector2( 1.49157, 1.46265 )
 normal = ExtResource( 8 )
 action = "ui_select"
