@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/fonts/kenvector_future.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/sprites/buttonLarge.png" type="Texture" id=2]
 [ext_resource path="res://scenes/VBoxMenu.gd" type="Script" id=3]
 [ext_resource path="res://assets/background/bkg_menu.png" type="Texture" id=4]
+[ext_resource path="res://assets/audio/theme.ogg" type="AudioStream" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
@@ -118,5 +119,10 @@ text = "EXIT
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
 [connection signal="pressed" from="VBoxMenu/Play" to="VBoxMenu" method="_on_Play_pressed"]
 [connection signal="pressed" from="VBoxMenu/Credits" to="VBoxMenu" method="_on_Credits_pressed"]
+[connection signal="pressed" from="VBoxMenu/Exit" to="VBoxMenu" method="_on_Exit_pressed"]

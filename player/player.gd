@@ -98,7 +98,7 @@ func _physics_process(delta):
 			new_anim = "falling"
 
 	if shoot_time < SHOOT_TIME_SHOW_WEAPON:
-		new_anim += "_weapon"
+		new_anim = "shot"
 
 	if new_anim != anim:
 		anim = new_anim
