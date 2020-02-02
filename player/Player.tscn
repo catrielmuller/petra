@@ -1,7 +1,7 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://player/player.gd" type="Script" id=1]
-[ext_resource path="res://player/robot_demo.png" type="Texture" id=2]
+[ext_resource path="res://assets/player/sprite_sheet.png" type="Texture" id=2]
 [ext_resource path="res://assets/audio/sound_jump.wav" type="AudioStream" id=3]
 [ext_resource path="res://assets/audio/sound_shoot.wav" type="AudioStream" id=4]
 [ext_resource path="res://player/osb_left.png" type="Texture" id=5]
@@ -13,7 +13,7 @@
 
 [sub_resource type="Animation" id=1]
 resource_name = "crouch"
-length = 0.01
+length = 0.5
 loop = true
 step = 0.25
 tracks/0/type = "value"
@@ -26,12 +26,12 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 22 ]
+"values": [ 4 ]
 }
 
 [sub_resource type="Animation" id=2]
 resource_name = "falling"
-length = 0.01
+length = 0.5
 loop = true
 step = 0.25
 tracks/0/type = "value"
@@ -44,7 +44,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 21 ]
+"values": [ 7 ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -62,11 +62,11 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 26 ]
+"values": [ 7 ]
 }
 
 [sub_resource type="Animation" id=4]
-length = 7.0
+length = 0.5
 loop = true
 step = 0.25
 tracks/0/type = "value"
@@ -76,10 +76,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1.25, 1.5, 2, 4.5, 4.75, 5, 5.25 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 16, 17, 18, 16, 19, 20, 19, 16 ]
+"values": [ 4 ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -96,7 +96,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 25 ]
+"values": [ 4 ]
 }
 
 [sub_resource type="Animation" id=6]
@@ -110,10 +110,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.25, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 23, 24, 23 ]
+"values": [ 8 ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -130,11 +130,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 26 ]
+"values": [ 8 ]
 }
 
 [sub_resource type="Animation" id=8]
-length = 1.25
 loop = true
 step = 0.25
 tracks/0/type = "value"
@@ -144,15 +143,13 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1, 1.25 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 0, 1, 2, 3, 4, 0 ]
+"values": [ 0, 1, 2, 3 ]
 }
 
 [sub_resource type="Animation" id=9]
-length = 1.25
-loop = true
 step = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -161,14 +158,30 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1, 1.25 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1.25 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 5, 6, 7, 8, 9, 5 ]
+"values": [ 0, 1, 2, 3, 5 ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "shot"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 5, 6 ]
 }
 
 [sub_resource type="Animation" id=10]
-length = 1.25
+length = 0.5
 loop = true
 step = 0.25
 tracks/0/type = "value"
@@ -178,10 +191,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1, 1.25 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 1.25 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 10, 11, 12, 13, 14, 5 ]
+"values": [ 4, 5 ]
 }
 
 [sub_resource type="CapsuleShape2D" id=11]
@@ -192,9 +205,9 @@ script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
-vframes = 2
-hframes = 16
-frame = 22
+vframes = 4
+hframes = 4
+frame = 6
 
 [node name="Smoke" type="Node2D" parent="Sprite"]
 position = Vector2( 20.7312, 3.21187 )
@@ -213,6 +226,7 @@ anims/jumping = SubResource( 6 )
 anims/jumping_weapon = SubResource( 7 )
 anims/run = SubResource( 8 )
 anims/run_weapon = SubResource( 9 )
+anims/shot = SubResource( 12 )
 anims/standing_weapon_ready = SubResource( 10 )
 
 [node name="Camera" type="Camera2D" parent="."]
