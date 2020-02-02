@@ -164,7 +164,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 5 ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=10]
 resource_name = "shot"
 length = 0.5
 tracks/0/type = "value"
@@ -180,7 +180,7 @@ tracks/0/keys = {
 "values": [ 5, 6 ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=11]
 length = 0.5
 loop = true
 step = 0.25
@@ -197,7 +197,7 @@ tracks/0/keys = {
 "values": [ 4, 5 ]
 }
 
-[sub_resource type="CapsuleShape2D" id=11]
+[sub_resource type="CapsuleShape2D" id=12]
 height = 44.4787
 
 [node name="Player" type="KinematicBody2D"]
@@ -207,14 +207,14 @@ script = ExtResource( 1 )
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 4
-frame = 6
+frame = 4
 
 [node name="Smoke" type="Node2D" parent="Sprite"]
 position = Vector2( 20.7312, 3.21187 )
 rotation = -1.45648
 
 [node name="BulletShoot" type="Position2D" parent="Sprite"]
-position = Vector2( 27.9775, -15.7215 )
+position = Vector2( 16.401, -8.653 )
 
 [node name="Anim" type="AnimationPlayer" parent="."]
 anims/crouch = SubResource( 1 )
@@ -226,8 +226,8 @@ anims/jumping = SubResource( 6 )
 anims/jumping_weapon = SubResource( 7 )
 anims/run = SubResource( 8 )
 anims/run_weapon = SubResource( 9 )
-anims/shot = SubResource( 12 )
-anims/standing_weapon_ready = SubResource( 10 )
+anims/shot = SubResource( 10 )
+anims/standing_weapon_ready = SubResource( 11 )
 
 [node name="Camera" type="Camera2D" parent="."]
 current = true
@@ -236,7 +236,7 @@ limit_top = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.291992, -0.756059 )
-shape = SubResource( 11 )
+shape = SubResource( 12 )
 
 [node name="SoundJump" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
@@ -278,7 +278,7 @@ action = "ui_select"
 visibility_mode = 1
 
 [node name="Shadow" type="Light2D" parent="."]
-position = Vector2( 28.6446, -15.8568 )
+position = Vector2( 16.401, -8.653 )
 texture = ExtResource( 10 )
 texture_scale = 0.4
 mode = 3
@@ -286,7 +286,7 @@ range_item_cull_mask = 31744
 shadow_item_cull_mask = 0
 
 [node name="Light" type="Light2D" parent="."]
-position = Vector2( 27.9536, -15.6351 )
+position = Vector2( 16.7823, -8.65304 )
 texture = ExtResource( 9 )
 texture_scale = 0.4
 color = Color( 0.65098, 0.65098, 0.65098, 1 )
