@@ -26,6 +26,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="VBoxMenu" type="VBoxContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5

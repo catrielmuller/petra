@@ -76,7 +76,6 @@ texture = ExtResource( 3 )
 texture_scale = 0.4
 color = Color( 0.65098, 0.65098, 0.65098, 1 )
 shadow_enabled = true
-shadow_color = Color( 1, 1, 1, 1 )
 shadow_filter = 3
 [connection signal="body_entered" from="." to="." method="_on_bullet_body_enter"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
