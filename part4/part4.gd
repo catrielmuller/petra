@@ -20,4 +20,4 @@ func _on_Area2D_body_entered(body):
 
 
 func _on_EndTimer_timeout():
-	get_tree().change_scene("res://scenes/menu.tscn")
+	get_tree().change_scene("res://scenes/credits.tscn")

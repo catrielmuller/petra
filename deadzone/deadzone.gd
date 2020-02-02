@@ -18,4 +18,4 @@ func _ready():
 
 func _on_Deadzone_body_entered(body):
 	if body is Player:
-		get_tree().change_scene("res://scenes/menu.tscn")
+		get_tree().change_scene("res://scenes/gameover.tscn")
