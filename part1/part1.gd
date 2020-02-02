@@ -17,3 +17,4 @@ func _on_Area2D_body_entered(body):
 		var sprite = temple.get_child(0)
 		sprite.visible = true
 		part.visible = false
+		($Audio as AudioStreamPlayer).play()

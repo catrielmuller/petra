@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://resources/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://part2/part2.tscn" type="PackedScene" id=15]
 [ext_resource path="res://part3/part3.tscn" type="PackedScene" id=16]
 [ext_resource path="res://part4/part4.tscn" type="PackedScene" id=17]
+[ext_resource path="res://assets/audio/theme.ogg" type="AudioStream" id=18]
 
 [node name="Stage" type="Node"]
 
@@ -248,3 +249,7 @@ light_mask = 31744
 scale = Vector2( 128, 2128 )
 z_as_relative = false
 texture = ExtResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+autoplay = true

@@ -240,6 +240,7 @@ shape = SubResource( 12 )
 
 [node name="SoundJump" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
+volume_db = 0.5
 
 [node name="SoundShoot" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
