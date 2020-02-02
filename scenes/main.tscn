@@ -241,7 +241,7 @@ position = Vector2( 1563.42, 731.536 )
 position = Vector2( 4479.23, 295.914 )
 
 [node name="Part4" parent="Node" instance=ExtResource( 17 )]
-position = Vector2( 665.753, 515.807 )
+position = Vector2( 666.894, 527.365 )
 
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 0, 0, 0, 1 )

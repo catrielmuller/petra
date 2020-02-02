@@ -2,7 +2,7 @@
 
 [ext_resource path="res://player/player.gd" type="Script" id=1]
 [ext_resource path="res://assets/player/sprite_sheet.png" type="Texture" id=2]
-[ext_resource path="res://assets/audio/sound_jump.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/audio/jump.wav" type="AudioStream" id=3]
 [ext_resource path="res://assets/audio/sound_shoot.wav" type="AudioStream" id=4]
 [ext_resource path="res://player/osb_left.png" type="Texture" id=5]
 [ext_resource path="res://player/osb_right.png" type="Texture" id=6]
@@ -240,7 +240,7 @@ shape = SubResource( 12 )
 
 [node name="SoundJump" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
-volume_db = 0.5
+volume_db = -5.0
 
 [node name="SoundShoot" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
