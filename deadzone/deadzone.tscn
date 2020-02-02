@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://deadzone/deadzone.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="Deadzone" type="Area2D"]
+scale = Vector2( 1.8, 1.8 )
+script = ExtResource( 1 )
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Enabler" type="VisibilityEnabler2D" parent="."]
+pause_particles = false
+[connection signal="body_entered" from="." to="." method="_on_Deadzone_body_entered"]
