@@ -22,7 +22,7 @@ onready var sprite = $Sprite
 onready var shadow = $Shadow
 onready var shottimer = $EndShot
 
-var ready_timeout; var beat_timeout
+var lockshot = false
 
 # cache bullet for fast access
 var Bullet = preload("res://player/Bullet.tscn")
@@ -58,7 +58,8 @@ func _physics_process(delta):
 		($SoundJump as AudioStreamPlayer2D).play()
 
 	# Shooting
-	if Input.is_action_just_pressed("ui_select"):
+	if Input.is_action_just_pressed("ui_select") && !lockshot:
+		lockshot = true
 		var bullet = Bullet.instance()
 		shadow.visible = false
 		# sprite.visible = false
@@ -104,6 +105,6 @@ func _physics_process(delta):
 		($Anim as AnimationPlayer).play(anim)
 
 func _on_EndShot_timeout():
-	print_debug("RECIVIO")
+	lockshot = false
 	shadow.visible = true
 	# sprite.visible = true

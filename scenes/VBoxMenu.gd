@@ -17,7 +17,7 @@ func _ready():
 
 
 func _on_Play_pressed():
-	get_tree().change_scene("res://scenes/test.tscn")
+	get_tree().change_scene("res://scenes/main.tscn")
 
 
 func _on_Credits_pressed():
