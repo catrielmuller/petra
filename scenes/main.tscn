@@ -24,6 +24,7 @@
 color = Color( 0.721569, 0.721569, 0.721569, 1 )
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 4 )]
+scroll_base_scale = Vector2( 1, 1 )
 
 [node name="Shadows" type="Sprite" parent="."]
 light_mask = 1025

@@ -41,6 +41,9 @@ func _physics_process(delta):
 	var on_floor = is_on_floor()
 
 	### CONTROL ###
+	
+	if Input.is_action_pressed("ui_cancel"):
+		get_tree().change_scene("res://scenes/menu.tscn")
 
 	# Horizontal movement
 	var target_speed = 0

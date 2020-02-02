@@ -14,16 +14,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://player/bullet.gd"
 }, {
-"base": "Area2D",
-"class": "Coin",
-"language": "GDScript",
-"path": "res://coin/coin.gd"
-}, {
-"base": "KinematicBody2D",
-"class": "Enemy",
-"language": "GDScript",
-"path": "res://enemy/enemy.gd"
-}, {
 "base": "KinematicBody2D",
 "class": "Player",
 "language": "GDScript",
@@ -31,8 +21,6 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Bullet": "",
-"Coin": "",
-"Enemy": "",
 "Player": ""
 }
 
