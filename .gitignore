@@ -15,3 +15,4 @@ data_*/
 
 # Project Ignores
 builds/
+.idea
