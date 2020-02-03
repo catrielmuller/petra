@@ -3872,7 +3872,7 @@ input, select, textarea {
 
 	#home {
 		background-attachment: fixed;
-		background-image: url("/images/bg.png");
+		background-image: url("/petra/images/bg.png");
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
